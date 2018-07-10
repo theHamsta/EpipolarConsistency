@@ -1,14 +1,15 @@
+[![Snap Status](https://build.snapcraft.io/badge/theHamsta/EpipolarConsistency.svg)](https://build.snapcraft.io/user/theHamsta/EpipolarConsistency)
+
 Copyrights Andre Aichert, aaichert@gmail.com, andre.aichert@cs.fau.de
 
-Epipolar Consistency of X-Ray Images
+# Epipolar Consistency of X-Ray Images
 
 This project provides both GPU and CPU implementations in C++/CUDA of the Epipolar Consistency Metric. The CPU version relies on Eigen 3 library and follows the 2016 CT-Meeting paper "Efficient Epipolar Consistency" by Aichert et al.
 
 The projects contained in this repository use the CMake build environment. You can use CMake to generate Visual Studio projects for Windows or makefiles for Linux and MacOS. All libraries used are available on all three platforms and the projects should build with very few fixes in source code.
 
-############
-### Building LibEpipolarConsietency using Microsoft Windows, Visual Studio and CMake.
-### I'm sure Linux folks will manage on their own.
+## Building LibEpipolarConsietency using Microsoft Windows, Visual Studio and CMake.
+I'm sure Linux folks will manage on their own.
 
 Prerequisites
 - VisualStudio
@@ -36,8 +37,7 @@ This tutorial includes the following setps
 	5.2) Configuration
 	5.3) Running the EpipolarConsistencyDemo (no CUDA)
 	
-#####
-# 1) Building NLopt
+### 1) Building NLopt
 
 We suggest using https://github.com/stevengj/nlopt from github which includes a CMakeLists.txt
 
@@ -61,18 +61,16 @@ Step  VII,  In the Solution Explorer, right-click the "INSTALL" project and sele
                 C:/Development/extern/nlopt/include/nlopt.f
                 C:/Development/extern/nlopt/lib/nlopt-0.dll
 
-# NOTE! #
-# For some weird readon I needed to add
-# set (NLOPT_FOUND 1)
-# as a last line in .../extern/nlopt/lib/cmake/nlopt/NLoptConfig.cmake
+ NOTE! #
+ For some weird readon I needed to add
+ set (NLOPT_FOUND 1)
+ as a last line in .../extern/nlopt/lib/cmake/nlopt/NLoptConfig.cmake
 				
 At this point, you can delete the sources.
 (example:)
     delete "C:/Development/nlopt" but keep "C:/Development/extern/nlopt"	
 
-#####
-# 
-# 2) Building LibGetSet from SourceForge
+### 2) Building LibGetSet from SourceForge
 
 If you would like to use the test/demo program, you will need to build another library straight from SourceForge.
 
@@ -111,8 +109,7 @@ At this point, you can delete the sources. Anyone with the same compiler and sam
 (example:)
     delete "C:/Development/GetSet" but keep "C:/Development/extern/GetSet"
 
-#####
-# 3) Building LibEpipolarConsietency
+### 3) Building LibEpipolarConsietency
 
 Step   I,   Uncompress the LibEpipolarConsietency sources
             (example:)
@@ -140,21 +137,20 @@ At this point, anyone with the same compiler (i.e. version of Visual Studio) wil
 
 
 
-#####
-# 4) Notes
+### 4) Notes
 
-# 4.1) Notes on using Eigen
+#### 4.1) Notes on using Eigen
 The Eigen library is entirely header-only. All you need to do is download a source zip from http://eigen.tuxfamily.org/ and unpack it.
 
 
-# 4.1) Notes on using Qt
+#### 4.2) Notes on using Qt
 Go to https://www.qt.io/download-open-source/ and download the community OpenSource version. Windows installers for Visual Studio exist.
 It saves some time later on if you set the environment variable CMAKE_PREFIX_PATH to include your version of Qt. If you skip this step you need to specify the paths "Qt5Code_DIR" etc. in CMake GUI manually.
 (example:)
     CMAKE_PREFIX_PATH -> C:/Qt/5.6/msvc2013_64/lib/cmake
 
 
-# 4.2) Notes on using LibEpipolarConsietency from a different project
+#### 4.3) Notes on using LibEpipolarConsietency from a different project
 
 Section 3) mentions, that it is possibly to ship LibEpipolarConsietency just by copying the files in the install directory. Setting up a project with CMake that includes LibEpipolarConsietency should be straight-forward.
 
@@ -176,10 +172,9 @@ Step  V,    Click Configure and Generate again.
 
 			
 
-#####
-# 5) Debugging from within Visual Studio
+## 5) Debugging from within Visual Studio
 
-# 5.1) Shared Libraries
+### 5.1) Shared Libraries
 Executables will be build to the directory ./EpipolarConsietency/bin/Debug . If you wish to run these executables from within Visual Studio, you will need to make sure all DLLs are found. The best way to do this is to copy the relevant DLLs to this directory.
 
 For example:
@@ -201,5 +196,5 @@ The same can be done for ./EpipolarConsietency/bin/Release accordingly (without 
 	msvcr120.dll
 	vcomp120.dll
 	
-# 5.2) Configuration
+### 5.2) Configuration
 I recommend creating a directory ./EpipolarConsietency/config and select it as current working directory for all configurations. All .ini files and temporary files will be placed there.

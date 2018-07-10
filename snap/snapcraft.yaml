@@ -26,5 +26,7 @@ parts:
      - libqt5svg5-dev
      - libomp-dev
      - zlib1g-dev
+     - libqt5opengl5-dev
+
     after: 
      - libgetset
