@@ -15,7 +15,7 @@ inline void cudaAssert(cudaError_t code, const std::string& file, int line, bool
 {
    if (code == cudaSuccess)
 	   return;
-   auto err=cudaGetErrorString(code);
+   const char* err=cudaGetErrorString(code);
 	std::cerr
 		<< "CUDA error " << (int)code << ": "
 		<<  err << "\n  at "

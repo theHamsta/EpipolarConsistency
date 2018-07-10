@@ -1,3 +1,5 @@
+set(CMAKE_CXX_STANDARD 11)
+
 if(MSVC)
 set(ICON_RC icon_win.rc icon.ico)
 else()

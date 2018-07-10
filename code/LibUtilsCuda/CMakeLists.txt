@@ -1,4 +1,4 @@
-
+set(CMAKE_CXX_STANDARD 11)
 if (CUDA_HAVE_GPU)
 	# cuda_add_executable(TestUtilsCuda
 	# 	TestUtilsCuda.cpp

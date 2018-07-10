@@ -1,5 +1,7 @@
 # find_package (Eigen3 3.2 REQUIRED NO_MODULE)
 
+set( CMAKE_CXX_STANDARD 11)
+
 # A libbrary for advanced 2D and 3D projective geometry
 add_library(LibProjectiveGeometry
 	# toString and stringTo<...> function for a few Eigen types.

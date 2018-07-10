@@ -21,12 +21,17 @@ parts:
   epipolar-consistency:
     plugin: cmake
     build-packages:
-     - libgl1-mesa-dev
      - libpng-dev
      - libqt5svg5-dev
      - libomp-dev
      - zlib1g-dev
      - libqt5opengl5-dev
+     - libeigen3-dev
+     - libgl1-mesa-dev
+     - libqt5widgets5
+     - libqt5core5a
+     - libgraphite2-dev
+     - libx11-dev
 
     after: 
      - libgetset

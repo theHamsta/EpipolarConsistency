@@ -1,3 +1,6 @@
+set(CMAKE_CXX_STANDARD 11)
+add_definitions(-std=c++11)
+set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -std=c++11" )
 
 # A library to evaluate a metric of epipolar consistency
 cuda_add_library(LibEpipolarConsistency
