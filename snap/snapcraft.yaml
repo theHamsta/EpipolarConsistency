@@ -6,12 +6,24 @@ description: Consistency Conditions for any two X-ray images. |
 
     The projects contained in this repository use the CMake build environment. You can use CMake to generate Visual Studio projects for Windows or makefiles for Linux and MacOS. All libraries used are available on all three platforms and the projects should build with very few fixes in source code.
 
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
 
 apps:
   nrrdView:
-    command: nrrdView
+    command: desktop-launch nrrdView
+    plugs:
+     - opengl
+     - hardware-observe
+     - x11
+     - home
+  TrajectoryView:
+    command: desktop-launch TrajectoryView
+    plugs:
+     - opengl
+     - hardware-observe
+     - x11
+     - home
 
 parts:
   libgetset:
@@ -27,11 +39,22 @@ parts:
      - zlib1g-dev
      - libqt5opengl5-dev
      - libeigen3-dev
-     - libgl1-mesa-dev
      - libqt5widgets5
      - libqt5core5a
      - libgraphite2-dev
+     - freeglut3-dev
      - libx11-dev
+     - libxmu-dev
+     - libxi-dev
+     - libgl1-mesa-glx
+     - libglu1-mesa
+     - libglu1-mesa-dev
+     - libglfw3-dev
+     - libgles2-mesa-dev
+     - libqt5printsupport5
 
     after: 
      - libgetset
+     - desktop-qt5
+
+ #     - cuda-build-deps
