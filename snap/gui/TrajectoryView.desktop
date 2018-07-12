@@ -1,0 +1,11 @@
+[Desktop Entry]
+Exec=epipolar-consistency.TrajectoryView
+GenericName=TrajectoryView 
+Name[de_DE]=TrajectoryView
+Name=TrajectoryView
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Science;Education;
+
+

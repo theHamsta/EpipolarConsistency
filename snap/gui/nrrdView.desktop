@@ -1,0 +1,11 @@
+[Desktop Entry]
+Exec=epipolar-consistency.nrrdView
+GenericName=nrrdView 
+Name[de_DE]=nrrdView
+Name=nrrdView
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Science;Education;
+
+
