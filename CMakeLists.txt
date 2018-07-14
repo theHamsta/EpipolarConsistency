@@ -49,10 +49,10 @@ endif()
 
 
 # I'd rather use current standards
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 if(CMAKE_COMPILER_IS_GNUCXX)
    
-    add_definitions(-std=c++11)
+    add_definitions(-std=c++14)
     # and a console window under windows
     if (WIN32)
         add_definitions(-mconsole)

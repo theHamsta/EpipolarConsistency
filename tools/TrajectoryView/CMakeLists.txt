@@ -1,4 +1,4 @@
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 if(MSVC)
 set(ICON_RC icon_win.rc icon.ico)
