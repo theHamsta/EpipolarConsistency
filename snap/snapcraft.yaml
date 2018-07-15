@@ -18,6 +18,7 @@ apps:
      - x11
      - home
      - desktop
+     - wayland
   TrajectoryView:
     command: desktop-launch TrajectoryView
     plugs:
@@ -26,6 +27,7 @@ apps:
      - x11
      - home
      - desktop
+     - wayland
 
 parts:
   libgetset:
