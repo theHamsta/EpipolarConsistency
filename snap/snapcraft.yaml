@@ -17,8 +17,8 @@ apps:
      - hardware-observe
      - x11
      - home
-     - desktop
      - wayland
+
   TrajectoryView:
     command: desktop-launch TrajectoryView
     plugs:
@@ -26,7 +26,6 @@ apps:
      - hardware-observe
      - x11
      - home
-     - desktop
      - wayland
 
 parts:
