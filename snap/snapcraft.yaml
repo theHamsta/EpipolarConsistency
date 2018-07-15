@@ -17,6 +17,7 @@ apps:
      - hardware-observe
      - x11
      - home
+     - desktop
   TrajectoryView:
     command: desktop-launch TrajectoryView
     plugs:
@@ -24,6 +25,7 @@ apps:
      - hardware-observe
      - x11
      - home
+     - desktop
 
 parts:
   libgetset:
