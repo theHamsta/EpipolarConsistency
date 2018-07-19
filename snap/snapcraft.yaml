@@ -19,6 +19,8 @@ apps:
      - hardware-observe
      - x11
      - home
+     - wayland
+
   TrajectoryView:
     command: desktop-launch TrajectoryView
     plugs:
@@ -26,6 +28,7 @@ apps:
      - hardware-observe
      - x11
      - home
+     - wayland
 
 parts:
   libgetset:

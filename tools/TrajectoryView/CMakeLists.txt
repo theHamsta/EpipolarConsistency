@@ -1,5 +1,4 @@
-set(CMAKE_CXX_STANDARD 11)
-find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+set(CMAKE_CXX_STANDARD 14)
 
 if(MSVC)
 set(ICON_RC icon_win.rc icon.ico)

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=epipolar-consistency.nrrdView
+Exec=epipolar-consistency.nrrdView %f
 GenericName=nrrdView 
 Name[de_DE]=nrrdView
 Name=nrrdView

@@ -1,8 +1,9 @@
-set(CMAKE_CXX_STANDARD 11)
-add_definitions(-std=c++11)
-set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -std=c++11" )
+set(CMAKE_CXX_STANDARD 14)
+add_definitions(-std=c++14)
+set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -std=c++14" )
 
 # A library to evaluate a metric of epipolar consistency
+if (CUDA_HAVE_GPU)
 cuda_add_library(LibEpipolarConsistency
 	# Common methods for ECC direct and with Radon intermediate
 	EpipolarConsistency.h
@@ -31,7 +32,8 @@ cuda_add_library(LibEpipolarConsistency
 	RadonIntermediate.cu
 	OPTIONS -DHAS_CUDA="Cuda Support"
 )
-target_link_libraries(LibEpipolarConsistency LibProjectiveGeometry LibUtilsCuda)
+
+
 install(FILES EpipolarConsistencyCommon.hxx EpipolarConsistency.h EpipolarConsistencyDirect.h RectifiedFBCC.h RadonIntermediate.h EpipolarConsistencyRadonIntermediate.h DESTINATION include/LibEpipolarConsistency)
 install(TARGETS LibEpipolarConsistency DESTINATION lib EXPORT LibEpipolarConsistency-targets)
 install(EXPORT LibEpipolarConsistency-targets DESTINATION cmake)
@@ -64,3 +66,5 @@ install(FILES Gui/PreProccess.h Gui/ComputeRadonIntermediate.hxx Gui/Visualizati
 install(TARGETS LibEpipolarConsistencyGui DESTINATION lib EXPORT LibEpipolarConsistencyGui-targets)
 install(EXPORT LibEpipolarConsistencyGui-targets DESTINATION cmake)
 set_property(TARGET LibEpipolarConsistencyGui PROPERTY FOLDER "EpipolarConsistency") 
+
+endif()
