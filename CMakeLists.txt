@@ -79,6 +79,7 @@ else()
 endif()
 
 # Add Eigen
+find_package (Eigen3 3.3 REQUIRED NO_MODULE)
 set(EIGEN3_INCLUDE_PATH "/usr/include/eigen3" CACHE PATH "Full path to Eigen3")
 include_directories(${EIGEN3_INCLUDE_PATH})
 
