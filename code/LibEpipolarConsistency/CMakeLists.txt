@@ -2,6 +2,7 @@ set(CMAKE_CXX_STANDARD 14)
 add_definitions(-std=c++14)
 set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -std=c++14" )
 
+if(CUDA_FOUND)
 # A library to evaluate a metric of epipolar consistency
 if (CUDA_HAVE_GPU)
 cuda_add_library(LibEpipolarConsistency

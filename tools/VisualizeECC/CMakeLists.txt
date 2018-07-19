@@ -1,4 +1,5 @@
 
+if(CUDA_FOUND)
 cuda_add_executable(VisualizeECC
 	VisualizeECC.cpp
 )
@@ -14,3 +15,4 @@ target_link_libraries( VisualizeECC_RadonIntermediate LibProjectiveGeometry LibE
 qt5_use_modules(VisualizeECC_RadonIntermediate Widgets Svg OpenGL PrintSupport)
 install(TARGETS VisualizeECC_RadonIntermediate DESTINATION bin)
 set_property(TARGET VisualizeECC_RadonIntermediate PROPERTY FOLDER "EpipolarConsistency") 
+endif()

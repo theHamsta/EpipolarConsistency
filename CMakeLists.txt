@@ -114,7 +114,10 @@ include_directories(./code)
 add_package(LibProjectiveGeometry            "code"  ${ECC_LIBRARY_VERSION})
 add_package(LibEpipolarConsistency           "code"  ${ECC_LIBRARY_VERSION})
 add_package(LibUtilsQt                       "code"  ${ECC_LIBRARY_VERSION})
+
+if(CUDA_FOUND)
 add_package(LibUtilsCuda                     "code"  ${ECC_LIBRARY_VERSION})
+endif()
 
 #####################################################
 # Executables "./tools" (enable/disable in CMake)
