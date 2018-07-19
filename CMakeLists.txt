@@ -1,6 +1,7 @@
 ﻿# We need cmake version 3.2.2 or higher
 cmake_minimum_required(VERSION 3.2.2)
 
+
 ############################################################
 # Epipolar Consistency Conditions in X-ray imaging.
 # Created by Andre Aichert andre.aichert@fau.de
@@ -48,8 +49,10 @@ endif()
 
 
 # I'd rather use current standards
+set(CMAKE_CXX_STANDARD 14)
 if(CMAKE_COMPILER_IS_GNUCXX)
-    add_definitions(-std=c++11)
+   
+    add_definitions(-std=c++14)
     # and a console window under windows
     if (WIN32)
         add_definitions(-mconsole)
@@ -62,10 +65,10 @@ endif()
 
 # Add OpenMP
 find_package(OpenMP)
-if (OPENMP_FOUND)
-    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
-    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-endif()
+#if (OPENMP_FOUND)
+    #set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    #set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+#endif()
 
 # Add NLOpt
 find_package(NLOpt QUIET)
@@ -127,3 +130,4 @@ if (NLOPT_FOUND)
 	add_subproject(FluoroTracking                "tools" OFF)
 endif()
 
+#add_subdirectory(code)

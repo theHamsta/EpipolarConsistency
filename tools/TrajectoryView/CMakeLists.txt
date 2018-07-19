@@ -1,3 +1,5 @@
+set(CMAKE_CXX_STANDARD 14)
+
 if(MSVC)
 set(ICON_RC icon_win.rc icon.ico)
 else()
@@ -9,7 +11,7 @@ add_executable( TrajectoryView
 	main_trajectoryview.cpp
 	${ICON_RC}
 )
-target_link_libraries( TrajectoryView LibProjectiveGeometry LibUtilsQt GetSet GetSetGui)
+target_link_libraries( TrajectoryView LibProjectiveGeometry LibUtilsQt GetSet GetSetGui Eigen3::Eigen)
 qt5_use_modules(TrajectoryView Gui Svg OpenGL PrintSupport)
 qt5_win32_copy_dlls(TrajectoryView "Core;Gui;Widgets;Svg;OpenGL;PrintSupport")
 install(TARGETS TrajectoryView RUNTIME DESTINATION bin)
