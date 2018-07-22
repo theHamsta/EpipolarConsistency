@@ -1,6 +1,7 @@
 # We need cmake version 3.2.2 or higher
 cmake_minimum_required(VERSION 3.2.2)
 
+find_package (Eigen3 3.3 REQUIRED NO_MODULE)
 
 ############################################################
 # Epipolar Consistency Conditions in X-ray imaging.
@@ -49,10 +50,10 @@ endif()
 
 
 # I'd rather use current standards
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 if(CMAKE_COMPILER_IS_GNUCXX)
    
-    add_definitions(-std=c++11)
+    add_definitions(-std=c++14)
     # and a console window under windows
     if (WIN32)
         add_definitions(-mconsole)
@@ -121,7 +122,7 @@ add_package(LibUtilsCuda                     "code"  ${ECC_LIBRARY_VERSION})
 #####################################################
 
 add_subproject(nrrdView                      "tools" ON)
-add_subproject(TrajectoryView                "tools" ON)
+add_subproject(TrajectoryView                "tools" OFF)
 add_subproject(VisualizeECC                  "tools" OFF)
 
 
