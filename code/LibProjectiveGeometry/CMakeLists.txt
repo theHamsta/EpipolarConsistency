@@ -1,6 +1,6 @@
 
 set( CMAKE_CXX_STANDARD 14)
-find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+find_package (Eigen3 3.0 REQUIRED NO_MODULE)
 
 # A libbrary for advanced 2D and 3D projective geometry
 add_library(LibProjectiveGeometry
