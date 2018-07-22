@@ -34,12 +34,8 @@ cuda_add_library(LibEpipolarConsistency
 	RadonIntermediate.cu
 	OPTIONS -DHAS_CUDA="Cuda Support"
 )
-<<<<<<< HEAD
 target_link_libraries(LibEpipolarConsistency LibProjectiveGeometry LibUtilsCuda Eigen3::Eigen)
-=======
 
-
->>>>>>> 35729b14464c16b15632b7cc056dfee768f6314b
 install(FILES EpipolarConsistencyCommon.hxx EpipolarConsistency.h EpipolarConsistencyDirect.h RectifiedFBCC.h RadonIntermediate.h EpipolarConsistencyRadonIntermediate.h DESTINATION include/LibEpipolarConsistency)
 install(TARGETS LibEpipolarConsistency DESTINATION lib EXPORT LibEpipolarConsistency-targets)
 install(EXPORT LibEpipolarConsistency-targets DESTINATION cmake)
@@ -67,13 +63,12 @@ add_library(LibEpipolarConsistencyGui
 	Gui/Registration.h
 	Gui/Registration.cpp
 )
-<<<<<<< HEAD
+
 target_link_libraries(LibEpipolarConsistencyGui LibEpipolarConsistency LibProjectiveGeometry LibUtilsQt GetSet GetSetGui Eigen3::Eigen)
 install(FILES Gui/PreProccess.h Gui/ComputeRadonIntermediate.hxx Gui/Visualization.h Gui/DisplayGeometry.hxx DESTINATION include/LibEpipolarConsistency/Gui)
-=======
+
 target_link_libraries(LibEpipolarConsistencyGui LibEpipolarConsistency LibProjectiveGeometry LibUtilsQt GetSet GetSetGui)
 install(FILES Gui/PreProccess.h Gui/ComputeRadonIntermediate.hxx Gui/MotionCompenstation.h Gui/Visualization.h Gui/DisplayGeometry.hxx DESTINATION include/LibEpipolarConsistency/Gui)
->>>>>>> 35729b14464c16b15632b7cc056dfee768f6314b
 install(TARGETS LibEpipolarConsistencyGui DESTINATION lib EXPORT LibEpipolarConsistencyGui-targets)
 install(EXPORT LibEpipolarConsistencyGui-targets DESTINATION cmake)
 set_property(TARGET LibEpipolarConsistencyGui PROPERTY FOLDER "EpipolarConsistency") 
