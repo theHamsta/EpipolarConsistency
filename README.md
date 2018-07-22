@@ -72,9 +72,8 @@ We have to build it ourselves:
  NOTE! #
  For some weird readon I needed to add
  set (NLOPT_FOUND 1)
- as a last line in .../extern/nlopt/lib/cmake/nlopt/NLoptConfig.cmake
-				
 At this point, you can delete the sources.
+
 (example:)
     delete "C:/Development/nlopt" but keep "C:/Development/extern/nlopt"	
 

@@ -22,8 +22,9 @@ if (CUDA_HAVE_GPU)
 
 	install(TARGETS LibUtilsCuda DESTINATION lib EXPORT LibUtilsCuda-targets)
 	install(EXPORT LibUtilsCuda-targets DESTINATION cmake)
-endif(CUDA_HAVE_GPU)
 
 # Header only linear algebra functions work on both CPU and GPU (i.e. always install)
 install(FILES culaut/culaut.hxx culaut/xgeinv.hxx culaut/xprojectionmatrix.hxx DESTINATION include/LibUtilsCuda/culaut)
 set_property(TARGET LibUtilsCuda PROPERTY FOLDER "Packages") 
+
+endif(CUDA_HAVE_GPU)

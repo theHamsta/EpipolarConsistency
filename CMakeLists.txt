@@ -1,4 +1,4 @@
-# We need cmake version 3.2.2 or higher
+﻿# We need cmake version 3.2.2 or higher
 cmake_minimum_required(VERSION 3.2.2)
 
 find_package (Eigen3 3.3 REQUIRED NO_MODULE)
@@ -80,6 +80,7 @@ else()
 endif()
 
 # Add Eigen
+find_package (Eigen3 3.3 REQUIRED NO_MODULE)
 set(EIGEN3_INCLUDE_PATH "/usr/include/eigen3" CACHE PATH "Full path to Eigen3")
 include_directories(${EIGEN3_INCLUDE_PATH})
 
@@ -115,7 +116,10 @@ include_directories(./code)
 add_package(LibProjectiveGeometry            "code"  ${ECC_LIBRARY_VERSION})
 add_package(LibEpipolarConsistency           "code"  ${ECC_LIBRARY_VERSION})
 add_package(LibUtilsQt                       "code"  ${ECC_LIBRARY_VERSION})
+
+if(CUDA_FOUND)
 add_package(LibUtilsCuda                     "code"  ${ECC_LIBRARY_VERSION})
+endif()
 
 #####################################################
 # Executables "./tools" (enable/disable in CMake)
