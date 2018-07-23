@@ -1,3 +1,4 @@
+find_package (Eigen3 3.2 REQUIRED NO_MODULE)
 set(CMAKE_CXX_STANDARD 14)
 if(MSVC)
 set(ICON_RC icon_win.rc icon.ico)
