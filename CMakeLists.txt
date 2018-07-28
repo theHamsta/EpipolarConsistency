@@ -1,7 +1,7 @@
 ﻿# We need cmake version 3.2.2 or higher
 cmake_minimum_required(VERSION 3.2.2)
 
-find_package (Eigen3 3.2  NO_MODULE)
+find_package (Eigen3   NO_MODULE)
 
 ############################################################
 # Epipolar Consistency Conditions in X-ray imaging.
@@ -80,7 +80,7 @@ else()
 endif()
 
 # Add Eigen
-find_package (Eigen3 3.2  NO_MODULE)
+find_package (Eigen3   NO_MODULE)
 set(EIGEN3_INCLUDE_PATH "/usr/include/eigen3" CACHE PATH "Full path to Eigen3")
 include_directories(${EIGEN3_INCLUDE_PATH})
 

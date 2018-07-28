@@ -2,7 +2,7 @@ set(CMAKE_CXX_STANDARD 14)
 add_definitions(-std=c++14)
 set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -std=c++14" )
 
-find_package (Eigen3 3.2 NO_MODULE)
+find_package (Eigen3  NO_MODULE)
 
 if(CUDA_FOUND)
 # A library to evaluate a metric of epipolar consistency
