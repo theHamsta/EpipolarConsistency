@@ -7,5 +7,6 @@ StartupNotify=true
 Terminal=false
 Type=Application
 Categories=Science;Education;
+Icon=${SNAP}/meta/gui/TrajectoryView.png
 
 

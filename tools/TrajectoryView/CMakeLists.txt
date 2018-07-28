@@ -1,4 +1,4 @@
-find_package (Eigen3 3.2 REQUIRED NO_MODULE)
+find_package (Eigen3 3.2  NO_MODULE)
 set(CMAKE_CXX_STANDARD 14)
 
 # if(MSVC)
@@ -17,4 +17,3 @@ qt5_use_modules(TrajectoryView Gui Svg OpenGL PrintSupport)
 qt5_win32_copy_dlls(TrajectoryView "Core;Gui;Widgets;Svg;OpenGL;PrintSupport")
 install(TARGETS TrajectoryView RUNTIME DESTINATION bin)
 set_property(TARGET TrajectoryView PROPERTY FOLDER "Utilities") 
->>>>>>> 35729b14464c16b15632b7cc056dfee768f6314b
