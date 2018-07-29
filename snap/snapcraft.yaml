@@ -32,8 +32,7 @@ apps:
 
 parts:
   libgetset:
-    source: https://github.com/theHamsta/LibGetSet.git
-    source-branch: integrate_qcommandpalette
+    source: https://github.com/aaichert/LibGetSet.git
     plugin: cmake
     
   eigen3:
