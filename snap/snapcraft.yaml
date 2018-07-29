@@ -32,7 +32,12 @@ apps:
 
 parts:
   libgetset:
-    source: https://github.com/aaichert/LibGetSet.git
+    source: https://github.com/theHamsta/LibGetSet.git
+    source-branch: integrate_qcommandpalette
+    plugin: cmake
+    
+  eigen3:
+    source: https://bitbucket.org/eigen/eigen
     plugin: cmake
 
   epipolar-consistency:
@@ -61,5 +66,6 @@ parts:
     after: 
      - libgetset
      - desktop-qt5
+     - eigen3
 
  #     - cuda-build-deps
