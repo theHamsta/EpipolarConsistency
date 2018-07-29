@@ -37,7 +37,7 @@ parts:
     plugin: cmake
     
   eigen3:
-    source: https://bitbucket.org/eigen/eigen
+    source: https://github.com/eigenteam/eigen-git-mirror.git
     plugin: cmake
 
   epipolar-consistency:
