@@ -36,8 +36,10 @@ parts:
     plugin: cmake
     
   eigen3:
-    source: https://github.com/eigenteam/eigen-git-mirror.git
+    source: http://bitbucket.org/eigen/eigen/get/3.2.10.tar.bz2
     plugin: cmake
+    prime: [ -* ]
+
 
   epipolar-consistency:
     plugin: cmake
